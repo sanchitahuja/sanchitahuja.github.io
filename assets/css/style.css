@@ -176,7 +176,8 @@ a:hover, a:focus, a:active {
 }
 
 .about-us-col {
-  height: 325px;
+  min-height: 360px;
+  height: auto;
   padding: 25px;
   text-align: center;
   background-color:
@@ -197,13 +198,16 @@ a:hover, a:focus, a:active {
 }
 .about-us-col .col-details {
   text-align: justify;
-  margin-bottom: 25px;
-  min-height: 80px;
+  margin-bottom: 15px;
+  min-height: 120px;
   color:rgba(255,201,13,1);
 }
 
 /* home/frontpage 
 ================================= */
+.hidden-xs{
+
+}
 .home-frontpage {
   margin: 25px 0;
 }
@@ -242,7 +246,7 @@ a:hover, a:focus, a:active {
   padding: 25px;
   color: #fff;
   text-align: justify;
-  background: rgba(255,201,13,0.6);
+  background: rgba(255,201,13,0.4);
   border-bottom: 1px solid #fff;
   visibility: hidden;
   opacity: 0;
@@ -324,14 +328,19 @@ a:hover, a:focus, a:active {
   background-image: url("../images/imdaad_pro/page-head.jpeg");
   background-position:center;
   background-size: cover;
+
 }
 #tabdeel-page-head{
   background-image: url("../images/tabdeel_pro/page-heading.jpg");
   background-position:center;
   background-size: contain;
 }
+.col-md-4{
+  margin-bottom:15px;
+}
 #page-heading-background{
   background-image: url("../images/nationals.jpg");
+
   background-position: center;
   background-size: cover;
 }
@@ -372,7 +381,10 @@ a:hover, a:focus, a:active {
   color:
   rgba(0,0,0,1);
 }
+.page-heading .container{
+  background-color:rgba(0,0,0,0.5);
 
+}
 
 /* contact 
 ================================= */
@@ -692,6 +704,25 @@ form .alert {
 }
 /* Small devices (tablets, 768px and Down) */
 @media (max-width: 768px) {
+  .frontpage-titles{
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    max-height:70px;
+    width: auto;
+    margin: 0;
+  }
+  .frontpage-title{
+    padding: 0;
+    max-height:40px;
+    width: auto;
+    margin: 0;
+  }
+  .col-details{
+    min-height: 80px;
+    height: auto;
+  }
   .header-contact {
     text-align: center;
   }
@@ -709,9 +740,18 @@ form .alert {
   .navbar-main #navbar a {
     border-bottom: none;
   }
-  .navbar-main .navbar-brand {
+  .navbar-main {
     padding: 6px 15px;
   }
+  .navbar-brand {
+    padding: 0px;
+  }
+  .navbar-brand>img {
+    height: 100%;
+    padding: 2px;
+    width: auto;
+  }
+
   .navbar-main .submenu {
     position: initial;
     display: none;
@@ -753,6 +793,7 @@ form .alert {
 }
 /* Extra Small devices (tablets, 480px and Down) */
 @media (max-width: 480px) {
+
   .carousel-home .carousel-title {
     font-size: 16px;
     margin: 0;
