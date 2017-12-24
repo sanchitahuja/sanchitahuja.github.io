@@ -37,65 +37,35 @@ $(function(){
 	    });
 
 	  }
+    /* ======================== Owl carousel ================================================*/
 
-	
+    if( $(".owl-carousel").length > 0 ) {
+
+        $(".owl-carousel").owlCarousel({
+
+            margin:25,
+            stagePadding: 25,
+            nav:true,
+            navText: [
+                "<i class='glyphicon glyphicon-chevron-left'></i>",
+                "<i class='glyphicon glyphicon-chevron-right'></i>"
+            ],
+            responsive:{
+                0:{
+                    items:2
+                },
+                600:{
+                    items:4
+                },
+                1000:{
+                    items:8
+                }
+            }
+
+        });
+    }
 
 
- 	//   Google map Script
-
-	function initMap() {
-
-  		
-  		var mapLatitude = 28.5610 ; // Google map latitude
-  		var mapLongitude = 77.2845; // Google map Longitude
-
-	    var myLatlng = new google.maps.LatLng( mapLatitude, mapLongitude );
-
-	    var mapOptions = {
-
-	            center: myLatlng,
-	            mapTypeId: google.maps.MapTypeId.ROADMAP,
-	            zoom: 10,
-	            scrollwheel: false
-	          };   
-
-	    var map = new google.maps.Map(document.getElementById("contact-map"), mapOptions);
-
-	    var marker = new google.maps.Marker({
-	    	
-	      position: myLatlng,
-	      map : map,
-	      
-	    });
-
-	    // To add the marker to the map, call setMap();
-	    marker.setMap(map);
-
-	    // Map Custom style
-	    var styles = [
-		{
-		    featureType: "road",
-		    elementType: "geometry",
-		    stylers: [
-		      { lightness: 80 },
-		      { visibility: "simplified" }
-		    ]
-		  },{
-		    featureType: "road",
-		    elementType: "labels",
-		    stylers: [
-		      { visibility: "off" }
-		    ]
-		  }
-		];
-
-		map.setOptions({styles: styles});
-
-	};
-
-	if( $("#contact-map").length > 0 ) {
-		initMap();
-	}
 
 });
 
