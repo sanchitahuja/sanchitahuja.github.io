@@ -10,60 +10,8 @@
       <link rel="stylesheet" href="owl-carousel/owl.theme.css">
       <!-- CUSTOM STYLE -->  
       <link rel="stylesheet" href="css/template-style.css">
-      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-      <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-      <script type="text/javascript" src="js/jquery-ui.min.js"></script>    
-      <script type="text/javascript" src="js/modernizr.js"></script>
-	  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	  <script>
-	  $( function() {
-		$( "#datepicker" ).datepicker({ minDate: -0, maxDate: "+1M +10D" });
-	  } );
-	  </script>
-      <script type="text/javascript" src="js/responsee.js"></script>   
-	  
-	  <script>
-		function validateForm() {
-			var email = document.forms["appform"]["email"].value;
-			var name = document.forms["appform"]["name"].value;
-			var phone = document.forms["appform"]["phone"].value;
-			var date = document.forms["appform"]["date"].value;
-			var atpos = email.indexOf("@");
-			var dotpos = email.lastIndexOf(".");
-			
-			if (email == "" || name == "" || phone == "") {
-				alert("Required Fields must be filled out");
-				return false;
-			}
-			
-			if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
-			alert("Not a valid e-mail address");
-			document.appform.email.focus();
-			return false;
-			}
-			
-			else if(! name.match(/^[A-Za-z]+$/))
-				{alert("Not a valid name");
-				document.appform.name.focus();
-				return false;
-				}
-			
-			else if(! phone.match(/^\d{10}+$/){ 
-				alert("Not a valid phone");
-				document.appform.phone.focus();
-				return false;
-				}	
-				
-			else{return true;}							  
-							 
-					
-		}
-		</script>
-      <!--[if lt IE 9]>
-	      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-      <![endif]-->
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
    </head>
    <body class="size-1140">
       <!-- TOP NAV WITH LOGO -->  
@@ -166,7 +114,59 @@
             </div>
          </div>
       </footer>
-      
+      <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+      <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+      <script type="text/javascript" src="js/modernizr.js"></script>
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script>
+          $( function() {
+              $( "#datepicker" ).datepicker({ minDate: -0, maxDate: "+1M +10D" });
+          } );
+      </script>
+      <script type="text/javascript" src="js/responsee.js"></script>
+
+      <script>
+          function validateForm() {
+              var email = document.forms["appform"]["email"].value;
+              var name = document.forms["appform"]["name"].value;
+              var phone = document.forms["appform"]["phone"].value;
+              var date = document.forms["appform"]["date"].value;
+              var atpos = email.indexOf("@");
+              var dotpos = email.lastIndexOf(".");
+
+              if (email == "" || name == "" || phone == "") {
+                  alert("Required Fields must be filled out");
+                  return false;
+              }
+
+              if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+                  alert("Not a valid e-mail address");
+                  document.appform.email.focus();
+                  return false;
+              }
+
+              else if(! name.match(/^[A-Za-z]+$/))
+              {alert("Not a valid name");
+                  document.appform.name.focus();
+                  return false;
+              }
+
+              else if(! phone.match(/^\d{10}$/)){
+                  alert("Not a valid phone");
+                  document.appform.phone.focus();
+                  return false;
+              }
+
+              else{return true;}
+
+
+          }
+      </script>
+      <!--[if lt IE 9]>
+      <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+      <![endif]-->
       
    </body>
 </html>
