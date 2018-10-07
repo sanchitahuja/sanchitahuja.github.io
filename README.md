@@ -1,2 +1,2 @@
 # sanchitahuja.github.io
-Enactus JMI Website Development 
+Enactus Jamia Millia Islamia (A Central University) Website Development 
